@@ -21,6 +21,8 @@ public class ItemListFragment extends ListFragment {
 
     private Listener listener;
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

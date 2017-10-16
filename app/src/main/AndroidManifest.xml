@@ -16,8 +16,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ItemsList" />
-        <activity android:name=".ItemDetail"></activity>
+        <activity
+            android:name=".ItemsList"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".ItemDetail"
+            android:parentActivityName=".ItemsList">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ItemsList" />
+        </activity>
+        <activity android:name=".NewItemActivity"></activity>
     </application>
 
 </manifest>
