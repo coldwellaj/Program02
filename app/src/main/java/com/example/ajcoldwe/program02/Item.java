@@ -36,6 +36,10 @@ public class Item {
         this.description = description;
     }
 
+    public static void newItem(String name, String description) {
+        new Item(name, description);
+    }
+
     public String getDescription() {
         return description;
     }

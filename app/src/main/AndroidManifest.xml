@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:label="Main Menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,19 +19,28 @@
         </activity>
         <activity
             android:name=".ItemsList"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:label="Item List">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".ItemDetail"
-            android:parentActivityName=".ItemsList">
+            android:parentActivityName=".ItemsList"
+            android:label="Item Detail">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ItemsList" />
         </activity>
-        <activity android:name=".NewItemActivity"></activity>
-    </application>
+        <activity
+            android:name=".NewItemActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="New Item">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        </application>
 
 </manifest>
